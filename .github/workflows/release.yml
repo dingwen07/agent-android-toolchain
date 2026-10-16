@@ -48,13 +48,15 @@ jobs:
           python-version: '3.12'
       - run: python -m unittest discover -s tests -v
       - name: Install pinned Android NDK
-        run: sdkmanager --install 'ndk;28.2.13676358'
+        run: |
+          SDK_ROOT="${ANDROID_HOME:-/usr/local/lib/android/sdk}"
+          "$SDK_ROOT/cmdline-tools/latest/bin/sdkmanager" --install 'ndk;28.2.13676358'
+          echo "ANDROID_NDK_HOME=$SDK_ROOT/ndk/28.2.13676358" >> "$GITHUB_ENV"
       - name: Build pinned archives
         env:
           ABI: ${{ matrix.abi }}
           RELEASE_TAG: ${{ needs.version.outputs.tag }}
         run: |
-          export ANDROID_NDK_HOME="$ANDROID_HOME/ndk/28.2.13676358"
           python toolchain/build_packs.py --abi "$ABI" --release "$RELEASE_TAG"
       - uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
         with:
