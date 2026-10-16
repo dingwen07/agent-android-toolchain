@@ -1,0 +1,18 @@
+[
+  {
+    "name": "smali",
+    "version": "3.0.10",
+    "url": "https://github.com/baksmali/smali/releases/download/3.0.10/smali-3.0.10-fat-release.jar",
+    "sha256": "32fa0e88a6c397b3922201adf5f3e534fbaed5a663c71d0c558c3ddce0af844a",
+    "source": "https://github.com/baksmali/smali/tree/3.0.10",
+    "license": "BSD-3-Clause"
+  },
+  {
+    "name": "baksmali",
+    "version": "3.0.10",
+    "url": "https://github.com/baksmali/smali/releases/download/3.0.10/baksmali-3.0.10-fat-release.jar",
+    "sha256": "37ae4a41a8886e15c20b8362fa4250f96bbdb55e1a608199ad8b5dff068b588f",
+    "source": "https://github.com/baksmali/smali/tree/3.0.10",
+    "license": "BSD-3-Clause"
+  }
+]

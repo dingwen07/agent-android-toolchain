@@ -1,0 +1,127 @@
+{
+  "format": 1,
+  "packs": [
+    {
+      "id": "core",
+      "name": "Core",
+      "description": "Bash, GNU utilities, Git, DNS, JSON, search, SQLite, HTTP and archive tools.",
+      "requires": [],
+      "roots": [
+        "termux-licenses",
+        "jq",
+        "ripgrep",
+        "sqlite",
+        "file",
+        "xxd",
+        "curl",
+        "openssl",
+        "tar",
+        "gzip",
+        "unzip",
+        "bash",
+        "gawk",
+        "sed",
+        "grep",
+        "coreutils",
+        "findutils",
+        "diffutils",
+        "bzip2",
+        "xz-utils",
+        "zstd",
+        "zip",
+        "yq",
+        "git",
+        "dnsutils"
+      ]
+    },
+    {
+      "id": "python",
+      "name": "Python",
+      "description": "Python, pip, Pillow and their native dependencies.",
+      "requires": [
+        "core"
+      ],
+      "roots": [
+        "python",
+        "python-pip",
+        "python-pillow"
+      ]
+    },
+    {
+      "id": "images",
+      "name": "Images",
+      "description": "ImageMagick, image formats, fonts and document conversion resources.",
+      "requires": [
+        "core"
+      ],
+      "roots": [
+        "imagemagick"
+      ]
+    },
+    {
+      "id": "media",
+      "name": "Media",
+      "description": "FFmpeg, ffprobe, codecs and their native dependencies.",
+      "requires": [
+        "core"
+      ],
+      "roots": [
+        "ffmpeg"
+      ]
+    },
+    {
+      "id": "java",
+      "name": "Java",
+      "description": "OpenJDK 21 and native runtime dependencies.",
+      "requires": [
+        "core"
+      ],
+      "roots": [
+        "openjdk-21"
+      ]
+    },
+    {
+      "id": "apk",
+      "name": "APK tools",
+      "description": "JADX, Apktool, smali, baksmali, aapt, signing and alignment tools.",
+      "requires": [
+        "core",
+        "java"
+      ],
+      "roots": [
+        "jadx",
+        "apktool",
+        "apksigner",
+        "aapt",
+        "aapt2"
+      ]
+    },
+    {
+      "id": "platform",
+      "name": "Android platform tools",
+      "description": "adb, fastboot, filesystem and image tools, including Python for the included scripts.",
+      "requires": [
+        "core"
+      ],
+      "roots": [
+        "android-tools",
+        "e2fsprogs",
+        "python",
+        "libpng"
+      ]
+    },
+    {
+      "id": "native",
+      "name": "Native analysis",
+      "description": "LLVM, binutils and radare2.",
+      "requires": [
+        "core"
+      ],
+      "roots": [
+        "binutils",
+        "llvm",
+        "radare2"
+      ]
+    }
+  ]
+}
